@@ -63,7 +63,7 @@ http.createServer((req, res) => {
             client(WebhookEventObject.message.id)
             .then((body)=>{
                 console.log(body);
-                fs.writeFile('./img.jpeg', body, 'utf-8', (err) => {
+                fs.writeFile('public/images/img.jpeg', body, 'utf-8', (err) => {
                     if(err) {
                         console.log(err);
                         return;
